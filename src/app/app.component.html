@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UNIT CONVERTER</title>
+</head>
+<body >
+	<form>
+		<table class="div1 gradient">
+			<tr>
+				<td>
+					<h2 class="center">UNIT CONVERTER</h2>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding-left: 150px; padding-bottom: 20px;">Value: 
+				<input type="number" name="value" [(ngModel)] = "val"/></td>
+			</tr>
+			<tr>
+				<td class="left">
+					<input type="radio" name="opt" value="m_cm" (click)="cm()">Millimeter To Centimeter <br>
+					<input type="radio" name="opt" value="cm_m" (click)="m()">Centimeter To Meter <br>
+					<input type="radio" name="opt" value="m_km" (click)="km()">Meter To Kilometer <br>
+					<input type="radio" name="opt" value="i_f" (click)="feet()">Inch To Feet <br>
+					<input type="radio" name="opt" value="f_y" (click)="yard()">Feet To Yard 
+				</td>
+			</tr>
+			<div class="ans">
+				<tr>
+					<td colspan="2" ><b><u>{{from}} {{to}} {{ans.toFixed(3)}}</u></b></td>
+				</tr>
+			 </div>
+		</table>
+	</form>
+</body>
+</html>
